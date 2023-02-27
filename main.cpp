@@ -15,10 +15,10 @@ int main() {
     long n_long = LONG_MAX;
     long long n_llong = LLONG_MAX;
 
-    cout << "int " << sizeof n_int << "bit" << endl;
-    cout << "short " << sizeof n_short << "bit" << endl;
-    cout << "long " << sizeof n_long << "bit" << endl;
-    cout << "long long " << sizeof n_llong << "bit" << endl;
+    cout << "int " << sizeof n_int << "Byte" << endl;
+    cout << "short " << sizeof n_short << "Byte" << endl;
+    cout << "long " << sizeof n_long << "Byte" << endl;
+    cout << "long long " << sizeof n_llong << "Byte" << endl;
     //c++ 코드에는 반드시 main의 함수가 있어야 한다.
     cout << "Hello World!" << endl;
 
@@ -94,5 +94,58 @@ int main() {
     auto n = 100; //n은 int
     auto x = 1.5; //x는 double
     auto y = 1.3e12L; //y는 long double
+    //정수형: 소수부가 없는 수
+    //음의 정수, 0, 양의 정수
+    //short, int, long, long long
+
+    /*
+     * 배열(array) : 같은 데이터형의 집합
+     * typeName arrayName[arraySize]
+     * 배열 원소에 대입할 값들을 콤마로 구분하여 중괄호로 묶어 선언한다.
+     * 초기화를 선언이후 나중에 할 수는 없다.
+     * 배열을 다른 배열에 통째로 대힙할수 없다.
+     * 초기화 값의 개수를 배열 원소의 개수보다 모자라게 제공할 수 있다.
+     * 배열을 부분적으로 초기화하면. 나머지 원소들은 0으로 설정한다.
+     * 배열을 초기화할때 대괄호 속을 비워두면 컴파일러가 초기화 값의 개수를 헤아려 배열 원소 개수를 저장한다
+     */
+    short month[12] = {1,2,3}; //선언
+    cout << month[1] << endl;
+    char hello[] = {'H','e','l','l','o'};
+    cout << hello << endl;
+    char hello2[] = "Hello";
+    cout << hello2 << endl;
+
+//    const int Size = 15;
+//    char name1[Size]; //비어있는 배열
+//    char name2[Size] = "C++programing"; //문자열 상수로 초기화된 배열
+//    cout << "안녕하세요! 저는 " << name2;
+//    cout << "입니다! 성함이 어떻게 되시나요?\n";
+//    cin.get(name1, Size);
+//    cout << "음, " << name1 << "씨, 당신의 이름은 ";
+//    cout << strlen(name1) << " 자입니다만\n";
+//    cout << sizeof(name1) << " 바이트 크기의 배열에 저장되었습니다. \n";
+//    cout << "이름이" << name1[0] << " 자로 시작하는군요. \n";
+//    name2[3] = '\0';
+//    cout << "제 이름의 처음 세 문자는 다음과 같습니다: ";
+//    cout << name2 << endl;
+
+    //C++에서 문자열을 다루는 방법 중 하나인 string
+    /*
+     * C스타일로 string 객체를 초기화할수 있다.
+     * cin을 사용하려 string 객체에 키보드 입력을 저장할 수 있다.
+     * cout을 사용하여 string 객체를 디스플레이할 수 있다.
+     * 배열 표기를 사용하여 string 객체에 저장되어 있는 개별적인 문자들에 접근할 수 있다.
+     *
+     * 배열을 다른 배열에 통째로 대입할수 없다.
+     * >> string에서는 가능함
+     */
+
+    char char1[20];
+    char char2[20] = "jauar";
+    string str1;
+    string str2 = "panda";
+//    char1 = char2 error
+    str1 = str2;
+    cout << str1[0] << endl;
     return 0;
 }
