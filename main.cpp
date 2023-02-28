@@ -176,5 +176,39 @@ int main() {
     };
 
     cout << A[0].name << endl;
+
+    union MyUnion
+    {
+        int intVal;
+        long longVal;
+        float floatVal;
+    };
+
+    MyUnion test;
+    test.intVal = 3;
+    cout << test.intVal << endl;
+    test.longVal = 33;
+    cout << test.longVal << endl;
+    test.floatVal = 3.3;
+    cout << test.floatVal << endl;
+
+    //열거체(enum)
+    //기호 상수를 만드는 것에 대한 또다른 방법.
+
+    enum spectrum
+    {
+        red = 0 ,orange = 2, yellow = 1, green, blue, vialet, indigo, ultraiolet //열거자들을 초기화 할때는 정수로 초기화 해야한다 초기화 하지 않은 열거자들은 그 이전의 열거자의 값보다
+        //1씩 더한 값을 가지게 된다.
+        /*
+         * stectrum을 새로운 데이터형 이름으로 만든다
+         * red, orange, yellow.. 0에서 7까지 정수 값을 각각 나타내는 기호 상수로 만든다
+         */
+    };
+    spectrum spectrum1 = green;
+    //열거체를 새로 선언 할때는 미리 명시한 열거자들만 값에 대입 할수 있음 열거자들의 산술 연산은 허용하지 않는다.
+    cout << spectrum1 << endl;
+    //변수를 새로 만들어 역거자들을 대입하여 계산 할수 있음
+    int w = orange;
+
     return 0;
 }
