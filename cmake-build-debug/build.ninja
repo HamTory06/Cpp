@@ -52,8 +52,8 @@ build CMakeFiles/untitled.dir/main.cpp.o: CXX_COMPILER__untitled_Debug /Users/ha
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir
 
-build CMakeFiles/untitled.dir/point.cpp.o: CXX_COMPILER__untitled_Debug /Users/hamtory/CLionProjects/untitled/point.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/point.cpp.o.d
+build CMakeFiles/untitled.dir/pointer.cpp.o: CXX_COMPILER__untitled_Debug /Users/hamtory/CLionProjects/untitled/pointer.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/pointer.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir
@@ -66,7 +66,7 @@ build CMakeFiles/untitled.dir/point.cpp.o: CXX_COMPILER__untitled_Debug /Users/h
 #############################################
 # Link the executable untitled
 
-build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.o CMakeFiles/untitled.dir/point.cpp.o
+build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.o CMakeFiles/untitled.dir/pointer.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk
   OBJECT_DIR = CMakeFiles/untitled.dir
   POST_BUILD = :
