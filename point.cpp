@@ -1,5 +1,7 @@
 #include <iostream> //전처리 지시자
 #include <climits>
+#define SIZE 20
+#define _CRT_SECURE_NO_WARNINGS
 
 using namespace std;
 
@@ -77,8 +79,39 @@ int main(){
     p3 = p3 + 1; //포인터를 증가시킨다.
     cout << "Now p3[0] is " << p3[0] << " and ";
     cout << "p3[1] is " << p3[1] << ".\n";
-    p3 = p3 - 2; //다시 시작 위치를 지시한다.
+    p3 = p3 - 1; //다시 시작 위치를 지시한다.
     delete[] p3; //배열 메모리를 해제한다.
-    //cin.get();
+
+    char* ps1;
+    char animal[SIZE];
+
+    cout << "동물 이름을 입력하십시오\n";
+    cin >> animal;
+
+    ps1 = new char[strlen(animal) + 1];
+    strcpy(ps1, animal); //animal의 값을 ps1에 복사
+
+    cout << "입력하신 동물 이름을 복사하였습니다" << endl;
+    cout << "입력하신 동물 이름은 " << animal << "이고, 그 주소는 " <<(int*)animal << " 입니다." << endl;
+    cout << "복사된 동물 이름은 " << ps1 << "이고, 그 주소는 " << (int*)ps1 << "입니다." << endl;
+
+    //동적 구조체 생성
+    struct MyStruct
+    {
+        char name[20];
+        int age;
+    };
+    MyStruct* temp = new MyStruct;
+
+    //temp -> name 이 코드랑 (*temp).name랑 같은 의미를 가진 코드이다
+    cout << "당신의 이름을 입력하십시오\n";
+    cin >> temp -> name;
+
+    cout << "당신의 나이를 입력하십시오\n";
+    cin >> (*temp).age;
+
+    cout << "안녕하세요! " << temp->name << "씨!\n";
+    cout << "당신은 " << temp -> age << "살 이군요!";
+
     return 0;
 }
