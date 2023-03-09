@@ -249,9 +249,34 @@ int main() {
 
     //while문, do while문
     int z = 0;
-    while (z < 10){ //z가 false면 while문이 끝난다 true면 while문이 계속 실행
-        cout << z << endl;
+    //str 마지막에 \0이 생략 되어있다.
+    string str = "HamTory";
+    // "!=" 같지 않다
+    while (str[z] != '\0'){ //z가 false면 while문이 끝난다 true면 while문이 계속 실행
+        cout << str[z] << endl;
         z++;
+    }
+    //for문 안에서만 i를 사용할수 있다
+    for(int i = 0; i < 3; i++){
+
+    }
+    int jj = 0;
+    //while에서 사용되는 jj를 while밖에서도 사용할수 있다
+    while(jj){
+        jj++;
+    }
+
+    int ii = 0;
+    //do while문은 do문 안에 있는 구문이 한번 실행되고 while에서 반복을 계속 할지 결정을 한다
+    do{
+        cout << "while문 입니다.\n";
+        ii++;
+    } while (ii<3);
+    cout<<endl;
+    bool tt = true;
+    bool ff = false;
+    while (ff){
+        cout << "Hello\n";
     }
 
     char test10[10] = {'a','b','c','d','e'};
