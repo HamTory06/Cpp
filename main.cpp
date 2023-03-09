@@ -286,5 +286,31 @@ int main() {
     cout << test10[3] << endl;
     cout << test10[4] << endl;
 
+    cout << endl;
+
+    // 반복문 활용
+    int array[10] {1,3,5,7,9};
+    for(int i = 0; i < 5; i++){
+        cout << array[i];
+    }
+    cout << endl;
+    for(int i: array){
+        cout << i;
+    }
+    cout << endl;
+    //2차원 배열
+    int temp[4][5] = {
+            {1,2,3,4,5},
+            {11,22,33,44,55},
+            {111,222,333,444,555},
+            {1111,2222,3333,4444,5555}
+    };
+    //중첩 루프
+    for(int i = 0; i < 4; i++){
+        for(int j = 0; j < 5; j++){
+            cout << temp[i][j] << " ";
+        }
+        cout << endl;
+    }
     return 0;
 }
